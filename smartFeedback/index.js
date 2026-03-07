@@ -4,7 +4,7 @@ const feedback = document.getElementById('displayFeedback');
 const addScore = document.getElementById('addScore');
 
 addScore.onclick = function(){
-    console.log("Button clicked");
+    resetScore.hidden = false;
     score = score + 1;
     displayScore.textContent = score;
     if(score >=10 && score < 20){
@@ -19,4 +19,5 @@ resetScore.onclick = function(){
     score = 0;
     displayScore.textContent = score;
     feedback.textContent = "Score reset. Start again!";
+    resetScore.hidden = true;
 }
