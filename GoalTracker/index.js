@@ -11,7 +11,16 @@ addGoal.onclick = function(){
     newLi.textContent = goal;
 
     newLi.onclick = function(){
-        newLi.remove();
+        if(newLi.style.textDecoration === "line-through"){
+            newLi.style.textDecoration = "none";
+            newLi.style.color = 'black';
+        }
+        else{
+            newLi.style.textDecoration = "line-through";
+            newLi.style.color = 'gray';
+        }
+        
+        
     }
     goalList.appendChild(newLi);
 
