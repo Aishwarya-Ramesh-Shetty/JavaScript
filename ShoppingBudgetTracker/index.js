@@ -6,7 +6,7 @@ const price = document.getElementById('price');
 function AddItem(){
     const itemPrice = Number(price.value);
     const itemName = item.value.trim();
-    if(itemName === " " || isNaN(itemPrice) || itemPrice < 0){
+    if(itemName === "" || isNaN(itemPrice) || itemPrice <= 0){
         alert("Please enter a valid item name and price.");
         return;
     }
