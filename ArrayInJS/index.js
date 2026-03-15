@@ -21,3 +21,7 @@ const avgValue = document.getElementById("avgValue");
 const displayAvg = () =>{
     avgValue.textContent = `The average grade is ${average}`;
 }
+
+for(let grade in grades){
+    console.log(`${grade}`)
+}
