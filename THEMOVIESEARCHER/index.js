@@ -1,6 +1,6 @@
 const moviename = document.getElementById("moviename");
 
-const movies = ["Batman", "Superman", "Spiderman", "Iron Man", "Wonder Woman", "Captain America", "Thor", "Hulk", "Black Widow", "Aquaman"];
+const movies = ["Batman", "Superman", "Avengers","Spiderman", "Iron Man", "Wonder Woman", "Captain America", "Thor", "Hulk", "Black Widow", "Aquaman"];
 
 const displayList = document.getElementById("displayMovieList");
 
