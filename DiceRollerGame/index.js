@@ -1,18 +1,40 @@
 
 
 
-let answer = document.getElementById("answer");
-let roll = document.getElementById("roll");
-let img = document.getElementById("displayimg")
 
-roll.onclick = function rollDice(){
-    let number = Math.floor(Math.random() * 6)+1;
 
-    img.src = `./images/dice${number}.png`
-    img.style.display = "block";
-    answer.value = number;
+function rollDice(){
+    let answer = document.getElementById("answer").value;
+    let diceResult = document.getElementById("diceResult");
+    let diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = [];
 
+    for(let i = 0;i<answer;i++){
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
+        images.push(`<img src="images/dice${value}.png" height="100"/>`)
+    }
+
+    diceResult.textContent = `dice:${values.join(",")}`
+    diceImages.innerHTML = images.join('');
+    answer="";
 }
+
+
+
+// let answer = document.getElementById("answer");
+// let roll = document.getElementById("roll");
+// let img = document.getElementById("displayimg")
+
+// roll.onclick = function rollDice(){
+//     let number = Math.floor(Math.random() * 6)+1;
+
+//     img.src = `./images/dice${number}.png`
+//     img.style.display = "block";
+//     answer.value = number;
+
+// }
 
 
 // roll.onclick = function rollDice(){
